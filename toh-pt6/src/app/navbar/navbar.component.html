@@ -1,0 +1,67 @@
+<div id="top-section">
+    <div id="logo" class="col-sm-4"><a routerLink="/">RENTAL BOOK PORTAL</a></div>
+
+    <div *ngIf="currentUser" id="user-nav">
+        <ul>
+            <li class="profile-information">
+                <a class="arrow">{{currentUser.firstName}}</a>
+                <ul>
+                    <li>
+                        <div class="profile-pic-lg"></div>
+                        <div class="profile-info-fl">
+                            <strong>{{currentUser.firstName}} {{currentUser.lastName}}</strong>
+                            <a routerLink="/edit-profile">Edit Profile</a>
+                            <a (click)="logout()" class="cursorPointer">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a>Help</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div id="navigation">
+    <div class="col-xs-12">
+        <ul class="pull-left menu">
+            <li><a routerLink="/control/issue book">Issue Book</a></li>
+            <li><a routerLink="/control/return book">Return Book</a></li>
+            <li><a routerLink="/control/order details">Order Details</a></li>
+            <li><a routerLink="/control/book search">Book Search</a></li>
+            <li><a routerLink="/control/add book">Add Book</a></li>
+            <li><a routerLink="/control/edit book detail">Edit Book Detail</a></li>
+            <li><a routerLink="/control/delete book">Delete Book</a></li>
+            <li><a routerLink="/control/book issue detail">Book Issue Detail</a></li>
+
+        </ul>
+        <ul class="pull-right">
+        </ul>
+    </div>
+</div>
+
+<div id="body-section">
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

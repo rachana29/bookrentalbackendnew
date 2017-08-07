@@ -1,0 +1,53 @@
+<div id="top-section">
+  <div id="logo" class="col-sm-4"><a routerLink="/issuebook">RENTAL BOOK PORTAL</a></div>
+  <div class="clearfix"></div>
+</div>
+
+<div id="navigation">
+  <div class="col-xs-12">
+  </div>
+</div>
+<div class="issuebook">
+
+
+  <div>
+    <form novalidate class="form-horizontal" >
+      <div class="form-group">
+        <label>User id</label>
+        <input type="text" class="form-control" name="issuebookId">
+      </div>
+      <div class="form-group">
+        <label>Book id</label>
+        <input type="text" class="form-control"  name="issuebookId">
+      </div>
+      <div class="form-group">
+        <label>Book Title</label>
+        <input type="text" class="form-control"  name="issuebookId">
+      </div>
+      <div class="form-group">
+        <label>Date of Issue</label>
+        <input type="text" class="form-control"  name="issuebookId">
+      </div>
+      <div class="form-group">
+        <label>Date of Return</label>
+        <input type="text" class="form-control"  name="issuebookId">
+      </div>
+      <div class="form-group">
+        <label>Price of Book</label>
+        <input type="text" class="form-control"  name="issuebookId">
+      </div>
+
+      <div class="forgetmenot pull-left">
+        <label for="rememberme"><input name="rememberme" id="rememberme" value="forever" type="checkbox">Remember Me</label>
+      </div>
+      <div class="submit pull-right">
+        <button type="submit" class="btn btn-primary" [class.disabled]="isClicked"
+                [disabled]="!issuebookForm.form.valid"
+                value="issuebook" name="issuebookButton">issuebook
+        </button>
+      </div>
+      <span class="clearfix"></span>
+    </form>
+  </div>
+</div>
+

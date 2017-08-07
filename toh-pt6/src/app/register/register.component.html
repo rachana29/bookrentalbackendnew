@@ -1,0 +1,41 @@
+
+<div class="register">
+    <div class="submit pull-right">
+        <a routerLink= "/register">User Registration</a>
+    </div>
+    <div>
+        <form class="form-horizontal" [formGroup]= "registerForm" (ngSubmit)="register(registerForm.value)">
+            <div class="form-group">
+                <label>Userid</label>
+                <input type="text" class="form-control" formControlName="user_id" name="UserId"/>
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" formControlName="user_name" name="Username"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" class="form-control" formControlName="password"  name="Password"/>
+            </div>
+            <div class="form-group">
+                <label>Usertype</label>
+                <input type="text" class="form-control" formControlName="user_type" name="Usertype"/>
+            </div>
+            <div class="form-group">
+                <label>EmailId</label>
+                <input type="text" class="form-control" formControlName="email_id"  name="email"/>
+            </div>
+            <div class="form-group">
+                <label>MobileNo</label>
+                <input type="text" class="form-control" formControlName="mobile_no"  name="mobileno"/>
+            </div>
+            <div >
+                <button type="submit" class="btn btn-primary" [class.disabled]="isClicked"
+                        value="Login" name="loginButton">Submit
+                </button>
+            </div>
+            <span class="clearfix"></span>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
